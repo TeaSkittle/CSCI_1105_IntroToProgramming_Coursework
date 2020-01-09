@@ -16,4 +16,5 @@ All java programs must have atleast 1 class, (1st letter uppercase for conventio
 Comments are same as C
 compile as: $ javac ClassName.java
 run as: $ java ClassName
-Name file same as classname to avoid confusion for now
+Source file(.java) must have the same exact name as the public class name
+
