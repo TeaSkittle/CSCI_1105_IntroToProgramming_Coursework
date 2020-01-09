@@ -2,7 +2,7 @@
 Author: Travis Dowd
 Date: 1-9-2020
 
-Ch1. Exercisze 1-5
+Ch1. Exercise 1-5
  */
 
 class Ex1_5 {
