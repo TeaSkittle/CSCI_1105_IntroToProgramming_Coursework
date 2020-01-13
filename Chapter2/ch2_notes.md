@@ -56,7 +56,7 @@ final int BRICKS_NEEDED = 200;
 
 ### Math Operations
 * Unary operators have only one operator, a binary operator has two
-* Has the same operators as C: + - * / %
+* Has the same operators as C: +  -  *  /  %
 * Extra math functions need to be included
 ```java
 import java.util.Math;
@@ -70,3 +70,15 @@ System.out.println(Math.pow(2, 3)); //Prints out 8.0
 ```java
 long ssn = 232_45_4519;
 ```
+* Has C assignment operators: +=  -=  *=  /=  %=
+* Has C increment & decrement operators: ++  --
+
+### Misc
+* To get current time from the UNIX Epoch
+```java
+System.currentTimeMillis();
+```
+* Would have to do more math to print out GMT time
+
+
+Left on 2.15 Number Type Conversions
