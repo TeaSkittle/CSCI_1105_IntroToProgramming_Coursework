@@ -38,3 +38,17 @@ class ScannerExample{
       }
 }
 ```
+
+### Naming Conventions
+* Variables and methods should be lowercase, if name is multe words use Camel Case
+'''java 
+int a, brick, brickHouse;
+```
+* Classes should start with uppercase, and than use Pascal Case
+```java
+public class BrickHouse {
+```
+* Capatalize every letter in a constant and spereate with underscores, like #define in C
+```java
+final int BRICKS_NEEDED = 200;
+```
