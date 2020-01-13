@@ -1,4 +1,4 @@
-# CSCI 1105 CH1 Notes
+# CSCI 1105 CH2 Notes
 
 ### Variables
 * Use _double_ for floating point numbers
