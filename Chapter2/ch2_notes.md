@@ -6,6 +6,12 @@
 ```java
 System.out.println("hello" + "world");
 ```
+* Remember that Java is case sensitive, so carefully name vriables.
+* To declare a constant variable, use the __final__ keyword, ex:
+```java
+final double PI = 3.14; // Declares a constant variable named pi
+```
+  * A constant variable doesnt change, hence the keyword constant/final
 
 ### Importing/Including
 * Can import packages two ways, either specific or using a wildard:
@@ -32,5 +38,3 @@ class ScannerExample{
       }
 }
 ```
-
-
