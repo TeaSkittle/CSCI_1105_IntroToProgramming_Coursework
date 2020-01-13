@@ -41,7 +41,7 @@ class ScannerExample{
 
 ### Naming Conventions
 * Variables and methods should be lowercase, if name is multe words use Camel Case
-'''java 
+```java 
 int a, brick, brickHouse;
 ```
 * Classes should start with uppercase, and than use Pascal Case
