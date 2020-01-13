@@ -38,6 +38,7 @@ class ScannerExample{
       }
 }
 ```
+* Can use nextDouble(), nextInt(), etc... to get a value from the user
 
 ### Naming Conventions
 * Variables and methods should be lowercase, if name is multe words use Camel Case
@@ -51,4 +52,21 @@ public class BrickHouse {
 * Capatalize every letter in a constant and spereate with underscores, like #define in C
 ```java
 final int BRICKS_NEEDED = 200;
+```
+
+### Math Operations
+* Unary operators have only one operator, a binary operator has two
+* Has the same operators as C: + - * / %
+* Extra math functions need to be included
+```java
+import java.util.Math;
+```
+* Exponents are done with: Math.pow(a, b), ex:
+```java
+System.out.println(Math.pow(2, 3)); //Prints out 8.0
+```
+* A __literal__ is a _constant value_ that appears directly in a program
+* For better readability, Java allows underscores between two digits in a literal number
+```java
+long ssn = 232_45_4519;
 ```
