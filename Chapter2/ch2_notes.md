@@ -3,6 +3,6 @@
 ### Variables
 * Use _double_ for floating point numbers
 * Can use + for addition and concatente strings, ex:
-'''java
+```java
 System.out.println("hello" + "world");
-'''
+```
