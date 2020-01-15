@@ -72,6 +72,11 @@ long ssn = 232_45_4519;
 ```
 * Has C assignment operators: +=  -=  *=  /=  %=
 * Has C increment & decrement operators: ++  --
+* Type casting = convert to another data type, ex:
+```java
+double tax = 0.06;
+System.out.println("Sales tax is $" + (int)(tax * 100) / 100.0);
+```
 
 ### Misc
 * To get current time from the UNIX Epoch
@@ -79,6 +84,3 @@ long ssn = 232_45_4519;
 System.currentTimeMillis();
 ```
 * Would have to do more math to print out GMT time
-
-
-Left on 2.15 Number Type Conversions
