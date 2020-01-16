@@ -9,7 +9,7 @@
 |----------|------|
 | !        | not  |
 | &&       | and  |
-| ||       | or   |
+| 2 pipes  | or   |
 | ^        | xor  |
 
 ### Random Number Generation
