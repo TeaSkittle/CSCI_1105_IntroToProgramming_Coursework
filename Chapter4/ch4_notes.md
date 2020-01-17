@@ -88,5 +88,5 @@ String s1 = input.next();
   * \t - Tab
   * \n - New Line
   * \r - Carriage Return
-  * \\ - Backslash
+  * \\\\ - Backslash
   * \\" - Double Quote
