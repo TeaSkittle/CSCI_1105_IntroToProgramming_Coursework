@@ -19,7 +19,7 @@
 a + Math.random() * b
 ```
 
-### Char Data Types
+### Char Data Type
 * char data type represents a single character
 ```java
 char letter = 'A';
@@ -54,6 +54,33 @@ j is 99
 */
 ```
 
+### String Data Type
+* To represent a string of character, use the *String* data type
+```java
+String message = "Hello World!";
+```
+* Simple methods for *String* objects:
+  * length() - Returns hte number of characters in this string
+  * charAt(index) - Returns the characters at the specified index from this string
+  * concat(s1) - Returns a new string the concatenates this string with string s1
+  * toUpperCase() - Returns a new string with all uppercase letters
+  * toLowerCase() - Returns a new string with all lowercase letters
+  * trim() - Returns a new string with withspace characters trimmed from both sides
+* To read a sring from the console, invoke the next() methos on a Scanner object:
+```java
+Scanner input = new Scanner(System.in);
+System.out.print("Enter a tring: ");
+String s1 = input.next();
+```
+* Comparison methods for *String* methods:
+  * equal(s1) - Returns true if this string is euqal to string s1
+  * equalsIgnoreCase(s1) - Returns true if string is equal to s1; case insensitive
+  * compareTo(s1) - Returns an integer greater than 0, equal to 0, or less than 0 to indicate whether this string is greater than, equal to, or less than s1.
+  * compareToIgnoreCase(s1) - Same as comapreTo except it's case insensitive
+  * startsWith(prefix) - Returns treu is this sring starts with specified prefix
+  * endsWith(suffix) - Returs true if this string ends with specified suffix
+  * contains(s1) - Returns true if s1 is a substring in this string
+
 ### Misc
 * You do not have to import Math functions, they are in stdio of language
 * Useful escape sequences:
@@ -62,4 +89,4 @@ j is 99
   * \n - New Line
   * \r - Carriage Return
   * \\ - Backslash
-  * \" - Double Quote
+  * \\" - Double Quote
