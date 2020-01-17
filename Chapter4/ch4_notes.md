@@ -18,3 +18,21 @@
 ```java
 a + Math.random() * b
 ```
+
+### Char Data Types
+* char data type represents a single character
+```java
+char letter = 'A';
+char numChar = '4';
+
+/* The first statement assigns A the char variable letter, the second
+statement assigns digit character 4 to the char variable numChar */
+```
+* A string litteral must be enclosed in quotations marks(" ")
+* A character literal must be enclosed in single quotes(' ')
+  1. Therefore "A" is a string and 'A' is a character
+
+
+
+### Misc
+* You do not have to import Math functions, they are in stdio of language
