@@ -31,8 +31,35 @@ statement assigns digit character 4 to the char variable numChar */
 * A string litteral must be enclosed in quotations marks(" ")
 * A character literal must be enclosed in single quotes(' ')
   1. Therefore "A" is a string and 'A' is a character
+* To use unicode character in your code, preceed hex code with \u
+```java
+char letter = '\u03b1' //the Greek letter alpha
+```
+* Any positive integer between 0 anf FFFF in hex can be cast into a char implicitly
+* All numeric operators can be applied to char operands:
+```java
+int i = '2' + '3';               // (int)'2' is 50 and (int)'3' is 51
+System.out.println("i is " + i); // i is 101
+int j = 2 + 'a';                 // (int)'a' is 97
+System.out.println("j is " + j); // j is 99
+System.out.println(j + " is the Unicode for character " 
+  + (char)j);                    // 99 is the Unicode for character c
 
+/*
+This would display:
 
+i is 101
+j is 99
+99 is the Unicode for character
+*/
+```
 
 ### Misc
 * You do not have to import Math functions, they are in stdio of language
+* Useful escape sequences:
+  * \b - Backspace
+  * \t - Tab
+  * \n - New Line
+  * \r - Carriage Return
+  * \\ - Backslash
+  * \" - Double Quote
