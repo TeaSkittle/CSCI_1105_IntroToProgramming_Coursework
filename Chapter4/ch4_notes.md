@@ -3,7 +3,7 @@
 ### Useful Math Functions
 * toDegree(radians) - Returns the angle in degress for the angle in radians
 * sin(radians) - Returns the trigonometric sine of an angle in radians
-  1. Also can do cos(radians) and tan(radians)
+  * Also can do cos(radians) and tan(radians)
 * exp(x) - Returns e raised to power of x (e^x)
 * log(x) - Returns the natural logarithm of x
 * pow(a, b) - Returns a raised to the power of b (a^b)
@@ -30,7 +30,7 @@ statement assigns digit character 4 to the char variable numChar */
 ```
 * A string litteral must be enclosed in quotations marks(" ")
 * A character literal must be enclosed in single quotes(' ')
-  1. Therefore "A" is a string and 'A' is a character
+  * Therefore "A" is a string and 'A' is a character
 * To use unicode character in your code, preceed hex code with \u
 ```java
 char letter = '\u03b1' //the Greek letter alpha
@@ -90,3 +90,5 @@ String s1 = input.next();
   * \r - Carriage Return
   * \\\\ - Backslash
   * \\" - Double Quote
+
+# Left off on 4.4.8 Obtaining Substrings
