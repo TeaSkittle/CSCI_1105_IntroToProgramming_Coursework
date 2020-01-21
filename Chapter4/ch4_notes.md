@@ -88,14 +88,20 @@ String message = message.substring(0, 11) + "HTML";
 ```
 * Remember that string are just arrays of characters, and can be treated as such:
 ```java
-"Welcome to Java".indexOf('o')
-```
-  * Another example showing substrings and character array:
-```java
 String s = "Kim Jones";
 int k = s.indexOf(' ');  // The blank space char in the string
 String firstName = s.substring(0, k);  // substring(beginIndex, endIndex)
 String lastName = s.substring(k + 1);  // k + 1 is 'J' in s
+```
+### Formatted output
+* To use fomratted out print, print wiht:
+```java
+System.out.printf();
+```
+* This allows for C style printing using delimeters, such as:
+```java
+int a = 4;
+System.out.printf("A = %d", a);
 ```
 
 ### Misc
