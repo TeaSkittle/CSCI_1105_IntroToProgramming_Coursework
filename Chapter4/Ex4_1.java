@@ -22,6 +22,6 @@ class Ex4_1 {
 	Area = (5 * (s * s)) / (4 * (Math.tan(Math.PI/5)));
 
 	// Print out Answer
-	System.out.println("The are of the pentagaon is " + Area);
+	System.out.println("The area of the pentagaon is " + Area);
     }
 }
