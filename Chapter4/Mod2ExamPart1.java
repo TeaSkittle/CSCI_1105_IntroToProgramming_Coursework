@@ -26,3 +26,5 @@ class Mod2ExamPart1 {
 		} System.out.printf("For the package to travel %d miles it would cost $%.02f.\n", distance, cost);
 	}
 }
+
+// Type 3 gives you far more control over the logic of the program.  Type 1 and 2 only allow for the base amount to be decided two ways, where as type 3 allows for as many as you want(all though a switch statement may be better, would also avoid nested if else statement to improve both speed and readability). Type 3 can result in many different base amounts, where as the other two are far more limited.
