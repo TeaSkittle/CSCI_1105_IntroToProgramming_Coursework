@@ -80,6 +80,23 @@ String s1 = input.next();
   * startsWith(prefix) - Returns treu is this sring starts with specified prefix
   * endsWith(suffix) - Returs true if this string ends with specified suffix
   * contains(s1) - Returns true if s1 is a substring in this string
+* To add on to a string, use substrings:
+```java
+String message = "Welcome to Java";
+String message = message.substring(0, 11) + "HTML";
+// Will print out: "Welcome to HTML"
+```
+* Remember that string are just arrays of characters, and can be treated as such:
+```java
+"Welcome to Java".indexOf('o')
+```
+  * Another example showing substrings and character array:
+```java
+String s = "Kim Jones";
+int k = s.indexOf(' ');  // The blank space char in the string
+String firstName = s.substring(0, k);  // substring(beginIndex, endIndex)
+String lastName = s.substring(k + 1);  // k + 1 is 'J' in s
+```
 
 ### Misc
 * You do not have to import Math functions, they are in stdio of language
@@ -91,4 +108,4 @@ String s1 = input.next();
   * \\\\ - Backslash
   * \\" - Double Quote
 
-# Left off on 4.4.8 Obtaining Substrings
+
