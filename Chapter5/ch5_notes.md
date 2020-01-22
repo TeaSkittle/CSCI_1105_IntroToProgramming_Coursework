@@ -24,4 +24,5 @@ for (i = initialValue; i < endValue; i++)
 }
 ```
 * All three loops are expressively equivalent, you can write the same loop in each style (except in very rare circumstances)
-
+* The keyword _break_ immediatley terminates the loop
+* The keyword _continue_ to end the current iteration and go the the end of the loop
