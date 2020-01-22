@@ -37,11 +37,11 @@ class Ex4_23 {
         System.out.println("Employee's Name: " + name);
         System.out.println("Hours Worked: " + hours);
         System.out.println("Pay Rate: " + rate);
-        System.out.println("Gross Pay: " + gross);
+        System.out.printf("Gross Pay: $%.2f\n", gross);
         System.out.println("Deductions: ");
-        System.out.printf("\tFederal Withholding: $%.02f\n", federal);
-        System.out.printf("\tState Withholding: $%.02f\n", state);
-        System.out.printf("\tTotal Deduction: $%.02f\n", totalDeduct);
-        System.out.printf("Net Pay: $%.02f\n", net);
+        System.out.printf("\tFederal Withholding: $%.2f\n", federal);
+        System.out.printf("\tState Withholding: $%.2f\n", state);
+        System.out.printf("\tTotal Deduction: $%.2f\n", totalDeduct);
+        System.out.printf("Net Pay: $%.2f\n", net);
     }
 }
