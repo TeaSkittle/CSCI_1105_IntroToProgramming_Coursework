@@ -16,5 +16,12 @@ do {
   Statement(s);
 } while (loop-continuation-condition);
 ```
-* __for__
+* __For__
+```java
+for (i = initialValue; i < endValue; i++)
+  // Loop body
+  ... 
+}
+```
+* All three loops are expressively equivalent, you can write the same loop in each style (except in very rare circumstances)
 
