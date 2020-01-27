@@ -20,5 +20,6 @@ modifier returnValueType methodName(list of parameters) {
   // Method body;
 }
 ```
+* Parameters are optional, for example _Math.random()_ has no parameters
 
-# Left off on 
+# Left off on 6.2 Reusing method
