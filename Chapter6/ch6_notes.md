@@ -35,6 +35,7 @@ public static void printGrade(double score) {
   }
   // etc...
 }
+```
 
 ### The Stack
 * Also refered to as: _execution stack, runtime stack, call stack, or machine stack_
