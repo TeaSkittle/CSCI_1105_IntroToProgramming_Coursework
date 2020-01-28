@@ -22,3 +22,22 @@ modifier returnValueType methodName(list of parameters) {
 ```
 * Parameters are optional, for example _Math.random()_ has no parameters
 * To invoke a method from another class: `ClassName.methodName`
+* A void method does not return a value
+* You can use _return;_ to terminate a void method early, example:
+```java
+public static void printGrade(double score) {
+  if (score < 0 || score > 100) {
+    System.out.println("Invalid score");
+    return;
+  }
+  if (score >= 90) {
+    System.out.println('A');
+  }
+  // etc...
+}
+
+### The Stack
+* Also refered to as: _execution stack, runtime stack, call stack, or machine stack_
+* Each time a method is invoked, the system creates an activation record and stores it in a stack. (Pushes onto the stack)
+* When a method finishes its work, it is removed from the stack (popped from the stack)
+
