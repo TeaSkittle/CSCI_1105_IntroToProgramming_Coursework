@@ -28,7 +28,7 @@ modifier returnValueType methodName(list of parameters) {
 public static void printGrade(double score) {
   if (score < 0 || score > 100) {
     System.out.println("Invalid score");
-    return;
+    return;  // This acts like a break statement in a loop
   }
   if (score >= 90) {
     System.out.println('A');
@@ -39,6 +39,8 @@ public static void printGrade(double score) {
 
 ### The Stack
 * Also refered to as: _execution stack, runtime stack, call stack, or machine stack_
-* Each time a method is invoked, the system creates an activation record and stores it in a stack. (Pushes onto the stack)
+* Each time a method is invoked, the system creates an activation record and stores it in a stack. (Pushed onto the stack)
 * When a method finishes its work, it is removed from the stack (popped from the stack)
 
+
+# Left off on 6.7
