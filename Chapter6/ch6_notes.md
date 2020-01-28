@@ -21,5 +21,4 @@ modifier returnValueType methodName(list of parameters) {
 }
 ```
 * Parameters are optional, for example _Math.random()_ has no parameters
-
-# Left off on 6.2 Reusing method
+* To invoke a method from another class: `ClassName.methodName`
