@@ -14,7 +14,7 @@ public static void main(String[] args) {
     System.out.println("Sum of 1 plus 10 is " + sum(1, 10);
 }
 ```
-* Syntax of defining a method:
+* Syntax for defining a method:
 ```java
 modifier returnValueType methodName(list of parameters) {
   // Method body;
@@ -29,18 +29,20 @@ public static void printGrade(double score) {
   if (score < 0 || score > 100) {
     System.out.println("Invalid score");
     return;  // This acts like a break statement in a loop
-  }
+  } 
   if (score >= 90) {
     System.out.println('A');
   }
   // etc...
 }
 ```
+* __Method Overloading__: two methods have the same name but different parameter lists within one class
 
 ### The Stack
 * Also refered to as: _execution stack, runtime stack, call stack, or machine stack_
 * Each time a method is invoked, the system creates an activation record and stores it in a stack. (Pushed onto the stack)
 * When a method finishes its work, it is removed from the stack (popped from the stack)
 
-
-# Left off on 6.7
+### Misc
+* __Local Variable__: A variable defined inside of a method, and only use withing the method
+* _Method abstraction_ is achieved by seperating the use of a method from its implementation
