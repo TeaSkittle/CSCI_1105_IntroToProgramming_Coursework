@@ -23,13 +23,14 @@ class Ex6_17 {
 		int col = 0;
 		for ( int row = 0; row <= n; row++) {
 			if ( row < n ) {
-				// Print out random 0 ro 1
+				// Print out random 0 or 1
 				System.out.print(( Math.round(Math.random() )));
 			} else if ( row == n ) {
 				col++;
 				//print 0 or 1
 				System.out.printf("\n");
 				if ( col != n ) {
+					// Print out random 0 or 1
 					System.out.print(( Math.round(Math.random() )));
 					row = 0;              // reset row count
 				} else if ( col >= n) {
