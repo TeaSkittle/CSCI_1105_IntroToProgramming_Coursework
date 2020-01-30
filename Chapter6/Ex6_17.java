@@ -2,7 +2,7 @@
 Author: Travis Dowd
 Date: 1-30-2020
 
-CHapter 6, exercise 6-17
+Chapter 6, exercise 6-17
 */
 
 import java.util.Scanner;
