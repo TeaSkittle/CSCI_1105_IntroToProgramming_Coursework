@@ -23,10 +23,10 @@ class Ex6_37 {
 		System.out.println( numberString );
 		return numberString;
 	}
-	public static String zeroLoop( int numZero ) {	       // Method for creating 0's at start of string
+	public static String zeroLoop( int numZero ) {	           // Method for creating 0's at start of string
 		String count = "";                                 // String of 0's
 		for ( int i = 0; i < numZero; i++ ) {
-			count += "0";                                  // Add '0' to string
+			count += "0";                              // Add '0' to string
 		} return count;
 	}
 }
