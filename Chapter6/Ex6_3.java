@@ -20,12 +20,12 @@ class Ex6_3 {
 	}
 	
 	public static int reverse( int number ) {
-		int digit, rev_int;		                   // Declare variables for the loop below
+		int digit, rev_int;		           // Declare variables for the loop below
 		rev_int = 0;
 		while ( number != 0 ) {
-			digit = number % 10;                   // Get last digit of number
-			rev_int = rev_int * 10 + digit;        // Add digit to rev_int (new reverse number)
-			number /= 10;                          // Set number = number / 10 (when number = zero, loop ends)
+			digit = number % 10;               // Get last digit of number
+			rev_int = rev_int * 10 + digit;    // Add digit to rev_int (new reverse number)
+			number /= 10;                      // Set number = number / 10 (when number = zero, loop ends)
 		}
 		return rev_int;
 	}
