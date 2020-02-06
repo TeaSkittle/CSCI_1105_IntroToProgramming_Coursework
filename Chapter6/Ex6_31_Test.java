@@ -1,6 +1,6 @@
 /*
  * Author: Travis Dowd
- * Date: 2-6-20202
+ * Date: 2-6-2020
  * 
  * Exercise 42-31
  * Got the test credit card numbers from: https://www.paypalobjects.com/en_GB/vhelp/paypalmanager_help/credit_card_numbers.htm
