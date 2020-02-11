@@ -42,7 +42,7 @@ public class Ex6_31 {
    * <br>2. Now add all single-digit numbers from Step 1
    * Example: <br>
    * 4388576018410707<br>
-   * <i><b>0 + 0 + 8 + 2 + 3 + 1 + 7 + 8 = 29</i></b><br>
+   * <i><b>0 + 0 + 8 + 2 + 3 + 1 + 7 + 8 = 29</b></i><br>
    * @param number (long; Credit card number)
    * @return The sum of every other digit from right to left
    */
@@ -59,15 +59,20 @@ public class Ex6_31 {
   }
   
   /**
-   * If number if a single digit return the number, else add the two digits together and return the sum.
+   * If number is a single digit return the number, else add the two digits together and return the sum.
    * @param number (int; number to be added with its own digits)
    * @return Return number if it is a single digit, otherwise, return the sum of the two digits.
    */
   public static int getDigit(int number) {
     return number % 10 + (number / 10);
   }
-  
-  /** Return sum of odd place digits in number */
+  /**
+   * <p>Add together each off the odd digits from right to left, example:<br>
+   * 4388576018410707<br>
+   * <i><b>7 + 7 + 1 + 8 + 0 + 7 + 8 + 3 = 41</b></i></p>
+   * @param number (long; Credit card number)
+   * @return The sum of odd place digits in number
+   */
   public static int sumOfOddPlace(long number) {
     int result = 0;
    
@@ -78,13 +83,20 @@ public class Ex6_31 {
     
     return result;
   }
-  
-  /** Return true if the number d is a prefix for number */
+  /**
+   * This checks to see if d is a prefix in the credit card number
+   * @param number (long; Credit card number)
+   * @param d (int; Number to be checked for in prefix)
+   * @return true if the number d is a prefix for number
+   */
   public static boolean prefixMatched(long number, int d) {
     return getPrefix(number, getSize(d)) == d;
   }
-  
-  /** Return the number of digits in d */
+  /**
+   * Find the number of digits in a credit card number
+   * @param d (long; Credit card number)
+   * @return the number of digits in d
+   */
   public static int getSize(long d) {
     int numberOfDigits = 0;
     
@@ -95,9 +107,12 @@ public class Ex6_31 {
     
     return numberOfDigits;
   }
-  
-  /** Return the first k number of digits from number. If the number
-   * of digits in number is less than k, return number. */
+  /**
+   * Get the prefix of the credit card number.
+   * @param number (long; Credit card number)
+   * @param k (int; Size of prefix to be checked)
+   * @return the first k number of digits from number. If the number of digits in number is less than k, return number.
+   */
   public static long getPrefix(long number, int k) {
     long result = number;
     
