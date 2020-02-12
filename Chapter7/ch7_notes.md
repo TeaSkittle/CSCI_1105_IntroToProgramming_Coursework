@@ -32,4 +32,27 @@ double[] myList = { 0, 1, 2 };
 double[] myList;
 myList = { 0, 1, 2 };
 ```
+* Since arrays contain the same data type, for loops are perfect for proccessing their data, example:
+```java
+double[] myList = new double[10];
+for ( int i = 0; i < myList.length; i++ ) {
+    System.out.print( myList[i] + " ");
+}
+```
+* Java also supports a foreach loop style syntax for manipulaitng arrays, exmaple:
+```java
+for ( double [[arrow]]e: myList ) {
+    System.out.println( e );
+}
+```
+* To copy an array you can either use System.arraycopy
+```java
+int a[] = {1,2,3,4};
+int b[] = new int[a.length];
+arraycopy(sourceArray, srcPos, targetArray, tarPos, length);
+System.arraycopy(a, 0, b, 0, a.length);
+for (int i = 0; i < b.length; i++) {
+    System.out.print(b[i] + " ");
+}
+```
 
