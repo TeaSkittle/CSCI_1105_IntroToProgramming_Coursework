@@ -1,6 +1,6 @@
 # CSCI 1105 CH7 Notes
 
-### Arrays
+### Array Basics
 * To declare an array, use this syntax:
 ```java
 // elementType[] arrayRefVar;
@@ -32,6 +32,12 @@ double[] myList = { 0, 1, 2 };
 double[] myList;
 myList = { 0, 1, 2 };
 ```
+* You can pass an array to a method: _public static void array( int[] a )_
+* A method can also return an array: _return array;_
+* Can declare a method with variable array size: _public int array( int... a)_
+* java.Utils.Arrays contains several useful methods to manipulate and handle arrays
+
+### Arrays & Loops
 * Since arrays contain the same data type, for loops are perfect for proccessing their data, example:
 ```java
 double[] myList = new double[10];
@@ -45,6 +51,8 @@ for ( double [[arrow]]e: myList ) {
     System.out.println( e );
 }
 ```
+
+### Copying Arrays
 * To copy an array you can either use System.arraycopy
 ```java
 int a[] = {1,2,3,4};
@@ -55,4 +63,8 @@ for (int i = 0; i < b.length; i++) {
     System.out.print(b[i] + " ");
 }
 ```
+
+### Command-Line Arguments
+* The main method takes string arguments _public statc void main(String[] args)_
+* Arguments are referenced with: args[0], args[1], args[2] (just like an array)
 
