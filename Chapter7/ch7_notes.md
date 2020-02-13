@@ -57,7 +57,7 @@ for ( double [[arrow]]e: myList ) {
 ```java
 int a[] = {1,2,3,4};
 int b[] = new int[a.length];
-arraycopy(sourceArray, srcPos, targetArray, tarPos, length);
+// arraycopy(sourceArray, srcPos, targetArray, tarPos, length);
 System.arraycopy(a, 0, b, 0, a.length);
 for (int i = 0; i < b.length; i++) {
     System.out.print(b[i] + " ");
