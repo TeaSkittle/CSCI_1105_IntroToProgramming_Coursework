@@ -19,4 +19,12 @@ int[][] triangleArray = {
 };
 // triangleArray[0].length = 5, triangleArray[4].length = 1
 ```
-*
+* To print a two-dimensional array using nested loops:
+```java
+for (in row =; row < matrix.length; row++) {
+  for (int column = 0; column < matrix[row].length; column++) {
+    System.out.print( matrix[row][column] + " ");
+  }
+}
+```
+ 
