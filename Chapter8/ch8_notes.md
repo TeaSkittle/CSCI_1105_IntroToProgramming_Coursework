@@ -1,6 +1,6 @@
 # CSCI 1105 CH8 Notes
 
-# Two-Dimensional Arrays
+### Two-Dimensional Arrays
 * Syntax for declaring a two-dimensional array is:
 ```java
 //elementType[][] arrayRefVar;
@@ -27,4 +27,5 @@ for (in row =; row < matrix.length; row++) {
   }
 }
 ```
- 
+
+# Left off on: 8.8 Multidimensional Arrays
