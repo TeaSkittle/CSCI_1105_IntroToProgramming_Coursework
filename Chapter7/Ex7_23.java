@@ -17,9 +17,10 @@ class Ex7_23 {
 				}
 			}
 		}
+		System.out.print("Open lockers: ");
 		for ( int i = 1; i < lockers.length; ++i ) {           // iterate through lockers once more
-			System.out.print( lockers[i] + " " );          // Print status of locker
-			if ( i % 10 == 0 ) { System.out.print("\n"); } // Print newline on 10
+			if ( lockers[i] == 1 )
+				System.out.print(i + " ");
 		}
 	}
 }
