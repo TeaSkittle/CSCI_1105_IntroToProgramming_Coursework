@@ -28,4 +28,6 @@ for (in row =; row < matrix.length; row++) {
 }
 ```
 
-# Left off on: 8.8 Multidimensional Arrays
+### Multidimensional Arrays
+* MD arrays are essentialy nest arrays(arrays consiting of arrays)
+* "A MD array is actually an array in which each element is an array."
