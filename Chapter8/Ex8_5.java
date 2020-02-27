@@ -1,5 +1,5 @@
 // Author: Travis Dowd
-// Date: 2-26-2020
+// Date: 2-27-2020
 //
 // Chapter 8, exercise 8-5
 
@@ -18,8 +18,8 @@ class Ex8_5 {
 			{1.0, 4.5, 2.2},
 			{1.1, 4.3, 5.2}
 		};
-		addMatrix(a, b);
-	}
+		printArray( addMatrix(a, b) );
+	}  // Method to find the sum of arrays
 	public static double[][] addMatrix(double[][] a, double[][] b){
 		double[][] c;
 		c = new double[3][3];
@@ -28,12 +28,17 @@ class Ex8_5 {
 				c[i][j] = a[i][j] + b[i][j];
 			}
 		}
-		// Make this a method to print out all the array
-		for (int row = 0; row < c.length; row++){
-			for (int col = 0; col < c[row].length; col++){
-				System.out.print( c[row][col] + " ");
+		return c;
+	}  // Method to print out the array with nice formating
+	public static void printArray( double[][] array){
+		for ( int row = 0; row < array.length; row++ ) {
+			for ( int col = 0; col < array[row].length; col++ ) {
+			if ( col % 3 == 0 ) {
+				System.out.printf( "\n" );
+				System.out.print( array[row][col] + " " );
+			} else
+				System.out.print( array[row][col] + " " );
 			}
 		}
-		return c;
 	}
 }
