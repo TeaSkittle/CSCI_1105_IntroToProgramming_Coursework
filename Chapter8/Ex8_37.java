@@ -6,20 +6,20 @@
 import java.util.Scanner;
 
 class Ex8_37 {
-	public static void randomElement( String[][] a ) {      // Method to find random element of array and compare input
+	public static void randomElement( String[][] a ) {          // Method to find random element of array and compare input
 		Scanner input = new Scanner( System.in );           // Create new scanner
 		int count = 0;                                      // Number of correct guesses
 		for ( int i = 0; i < 10; i++ ) {                    // Get input 10 times
-			int rand = (int)(Math.random() * 49);           // Random value from 0 to 49
-			System.out.print( a[rand][0] );                 // Print out state name
-			System.out.print( ": " );                       // Prompt user for capital name
-			String b = input.nextLine();                    // Get user input for capital
-			b = b.toLowerCase();                            // Convert to lower case, make non case-sensitive
-			if ( b.equals( a[rand][1].toLowerCase()) )      // if input equals correct capital name
-				count++;                                    // Increment count by one
+			int rand = (int)(Math.random() * 49);       // Random value from 0 to 49
+			System.out.print( a[rand][0] );             // Print out state name
+			System.out.print( ": " );                   // Prompt user for capital name
+			String b = input.nextLine();                // Get user input for capital
+			b = b.toLowerCase();                        // Convert to lower case, make non case-sensitive
+			if ( b.equals( a[rand][1].toLowerCase()) )  // if input equals correct capital name
+				count++;                            // Increment count by one
 		} System.out.println( "Total correct: " + count );  // Print out total correct guesses at end of loop
 	}                                              
-	public static void main(String[] args) {                 // main method
+	public static void main(String[] args) {                     // main method
 		String[][] capitals = {                              // Array of all 50 states and capitals
 			{ "Alabama", 			"Montgomery" },
 			{ "Alaska", 			"Juneau" },
@@ -32,14 +32,14 @@ class Ex8_37 {
 			{ "Florida", 			"Tallahassee" },
 			{ "Georgia", 			"Atlanta" },
 			{ "Hawaii", 			"Honolulu" },
-			{ "Idaho",	 			"Boise" },
+			{ "Idaho",	 		"Boise" },
 			{ "Illinois", 			"Springfield" },
 			{ "Indiana", 			"Indianapolis" },
-			{ "Iowa",	 			"Des Moines" },
+			{ "Iowa",	 		"Des Moines" },
 			{ "Kansas", 			"Topeka" },
 			{ "Kentucky", 			"Frankfort" },
 			{ "Louisiana", 			"Baton Rouge" },
-			{ "Maine",	 			"Augusta" },
+			{ "Maine",	 		"Augusta" },
 			{ "Maryland", 			"Annapolis" },
 			{ "Massachusetts", 		"Boston" },
 			{ "Michigan", 			"Lansing" },
@@ -55,7 +55,7 @@ class Ex8_37 {
 			{ "New York", 			"Albany" },
 			{ "North Carolina",		"Raleigh" },
 			{ "North Dakota", 		"Bismarck" },
-			{ "Ohio",	 			"Columbus" },
+			{ "Ohio",	 		"Columbus" },
 			{ "Oklahoma", 			"Oklahoma City" },
 			{ "Oregon", 			"Salem" },
 			{ "Pennsylvania",		"Harrisburg" },
@@ -63,8 +63,8 @@ class Ex8_37 {
 			{ "South Carolina",		"Columbia" },
 			{ "South Dakota", 		"Pierre" },
 			{ "Tennessee", 			"Nashville" },
-			{ "Texas",	 			"Austin" },
-			{ "Utah",	 			"Salt Lake City" },
+			{ "Texas",	 		"Austin" },
+			{ "Utah",	 		"Salt Lake City" },
 			{ "Vermont", 			"Montpelier" },
 			{ "Virginia", 			"Richmond" },
 			{ "Washington", 		"Olympia" },
