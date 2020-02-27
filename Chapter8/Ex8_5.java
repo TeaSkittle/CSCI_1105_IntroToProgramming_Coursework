@@ -4,10 +4,7 @@
 // Chapter 8, exercise 8-5
 
 class Ex8_5 {
-	public static void main(String[] args) {
-		//double[][] a, b;
-		//a = new double[3][3];
-		//b = new double[3][3];
+	public static void main(String[] args) {;
 		double [][] a = {
 			{1.0, 2.0, 3.0},
 			{4.0, 5.0, 6.0},
