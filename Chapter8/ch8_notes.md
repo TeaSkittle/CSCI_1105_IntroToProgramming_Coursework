@@ -21,9 +21,9 @@ int[][] triangleArray = {
 ```
 * To print a two-dimensional array using nested loops:
 ```java
-for (in row =; row < matrix.length; row++) {
-  for (int column = 0; column < matrix[row].length; column++) {
-    System.out.print( matrix[row][column] + " ");
+for ( int row =0; row < matrix.length; row++ ) {
+  for ( int column = 0; column < matrix[row].length; column++ ) {
+    System.out.print( matrix[row][column] + " " );
   }
 }
 ```
