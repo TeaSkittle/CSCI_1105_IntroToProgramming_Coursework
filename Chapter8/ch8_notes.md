@@ -29,5 +29,5 @@ for ( int row = 0; row < matrix.length; row++ ) {
 ```
 
 ### Multidimensional Arrays
-* MD arrays are essentialy nested arrays(arrays consiting of arrays)
+* MD arrays are essentialy nested arrays(arrays consisting of arrays)
 * "A MD array is actually an array in which each element is an array."
