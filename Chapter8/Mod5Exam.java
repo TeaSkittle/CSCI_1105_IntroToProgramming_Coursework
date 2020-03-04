@@ -36,7 +36,7 @@ class Mod5ExamPart1 {
 		for ( int i = 0; i < 25; i++ ) {				// Begin looping through scores[] for exam scores
 			scores[i] = input.nextDouble();				// Get input for scores[i]
 			sum += scores[i];					// Add scores[i] to sum (for average)
-			if ( scores[i] > 90.0 && scores[i] < 100.0 ) { a++; }	// Number of A's
+			if ( scores[i] > 90.0 && scores[i] <=100.0 ) { a++; }	// Number of A's
 			if ( scores[i] > 80.0 && scores[i] < 90.0  ) { b++; }	// Number of B's
 			if ( scores[i] > 70.0 && scores[i] < 80.0  ) { c++; }	// Number of C's
 			if ( scores[i] > 60.0 && scores[i] < 70.0  ) { d++; }	// Number of D's
