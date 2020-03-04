@@ -69,7 +69,7 @@ class Mod5ExamPart1 {
 		for (int d = 0; d < days; d++) {							// Loop through each day
 			System.out.println("\nDay " + (d+1));					// Print out day before input
 			for (int r = 0; r < att.length; r++) {					// Loop though each row
-				System.out.print("Enter 5 numbers for row "			
+				System.out.print("Enter 5 numbers for row "		
 				+ r + " (1 = absent, 0 = present): ");				// Prompt for input
 				for (int c = 0; c < att[r].length; c++) {			// Loop though each column
 					att[r][c] = input.nextInt() + att[r][c];		// Increment attendance if missed
