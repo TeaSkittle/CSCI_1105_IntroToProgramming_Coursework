@@ -75,7 +75,7 @@ class Mod5ExamPart1 {
 					att[r][c] = input.nextInt() + att[r][c];// Increment attendance if missed
 				}
 			}
-		}  // Display seating chart showing number of absences;
+		}
 		System.out.println("\nStudent Attendance: ");			// Begin printing of attendance
 		for (int r = 0; r < att.length; r++) {				// Loop through each row
 			System.out.print( "\n" );				// Print new line
