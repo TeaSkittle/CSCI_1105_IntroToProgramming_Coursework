@@ -5,8 +5,6 @@
 // Intro to Programming Final Project
 
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
 
 class ChordED {
 	public static void main(String[] args) {
