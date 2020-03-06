@@ -8,7 +8,7 @@
 import java.util.Scanner;
 
 class ChordED {
-	public static void main(String[] args) {
+	public static void main( String[] args ) {
 		int[] finger = new int[6];
 		String name = "";
 		String[][] guitar = { 
@@ -18,7 +18,7 @@ class ChordED {
 		getInput( guitar, finger, name );
 		printChord( guitar, finger, name );
 	}
-	public static void getInput( String[][] chord, int[] fing_pos, String title ){
+	public static void getInput( String[][] chord, int[] fing_pos, String title ) {
 		Scanner input = new Scanner( System.in );
 		System.out.print( "Enter name of chord: " );
 		title = input.nextLine();
@@ -29,7 +29,7 @@ class ChordED {
 			chord[i][fret] = "O";
 		}
 	}
-	public static void printChord( String[][] chord, int[] fing_pos, String title ){
+	public static void printChord( String[][] chord, int[] fing_pos, String title ) {
 		System.out.printf( "\t%s\n", title );
 		System.out.println( "   -------------" );
 		for ( int i = 0; i < 6; i++ ) {
