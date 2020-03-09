@@ -7,11 +7,11 @@ and guitar tablature:
 ![tab](tab.png)  
 Those two concepts combined creates this:  
 ```
-	Em  
+	E  
    -----------------    
 O || - - - - - - - ||  
 O || - - - - - - - ||    
-O || - - - - - - - ||  
+O || 1 - - - - - - ||  
 - || - 2 - - - - - ||       
 - || - 2 - - - - - ||  
 O || - - - - - - - ||    
