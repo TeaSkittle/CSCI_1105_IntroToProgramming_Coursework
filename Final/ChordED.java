@@ -65,8 +65,8 @@ class ChordED {
 			}
 		} System.out.println ("   -----------------" );
 	}
-	public static void writeFile(String[][] chord, String title ) throws IOException {
-		try (FileWriter fileWriter = new FileWriter( "lib/" + title + ".txt")) {
+	public static void writeFile( String[][] chord, String title ) throws IOException {
+		try (FileWriter fileWriter = new FileWriter( "lib/" + title + ".txt" )) {
 			fileWriter.write( "\t" + title + "\n" );
 			fileWriter.write( "   -----------------\n" );
 			for ( int i = 0; i < 6; i++ ) {
@@ -77,7 +77,7 @@ class ChordED {
 						fileWriter.write( "||\n" );
 					}
 				}
-			} fileWriter.write ("   -----------------" );
+			} fileWriter.write ( "   -----------------" );
 		}
 	}
 }
