@@ -17,3 +17,7 @@ O || 1 - - - - - - ||
 O || - - - - - - - ||    
    -----------------
 ```
+ ### Features
+ * Can create custom chords
+ * Store as many chords as the user wants
+ * Chords are exported into their own text files
