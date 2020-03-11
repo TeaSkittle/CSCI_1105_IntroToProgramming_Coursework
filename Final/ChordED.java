@@ -91,18 +91,18 @@ class ChordED {
 	*	@param title (String; name of the chord inputted)
 	*/
 	public static void writeFile( String[][] chord, String title ) throws IOException {	// throw IOExpection for file handling
-		try (FileWriter fileWriter = new FileWriter( "chords/" + title + ".txt" )) {
-			fileWriter.write( "\t" + title + "\n" );
-			fileWriter.write( "   ---------------------\n" );
-			for ( int i = 0; i < 6; i++ ) {
-				fileWriter.write( chord[i][0] + " || " );
-				for ( int j = 1; j < 10; j++ ) {
-					fileWriter.write( chord[i][j] + " " );
-					if ( j == 9 ) { 
-						fileWriter.write( "||\n" );
+		try (FileWriter fileWriter = new FileWriter( "chords/" + title + ".txt" )) {	// Create new file to write to
+			fileWriter.write( "\t" + title + "\n" );				// Write chord name to file
+			fileWriter.write( "   ---------------------\n" );			// Start fretboard of guitar 
+			for ( int i = 0; i < 6; i++ ) {						// Loop through each guitar string
+				fileWriter.write( chord[i][0] + " || " );			// Write clean formatting of array
+				for ( int j = 1; j < 10; j++ ) {				// Loop through fret of guitar
+					fileWriter.write( chord[i][j] + " " );			// Write chord[i][j] with space
+					if ( j == 9 ) { 					// If fret if is 9, add newline at end
+						fileWriter.write( "||\n" );			// Write clean formatting of array
 					}
 				}
-			} fileWriter.write ( "   ---------------------\n" );
+			} fileWriter.write ( "   ---------------------\n" );			// End fretboard of guitar
 		}
 	}
 	/**
@@ -130,8 +130,8 @@ class ChordED {
 	*	@param guitar (String[][]; Array that is used for storing the guitar chord)
 	*/
 	public static void cmdLineArgs( String[] args, String[][] guitar ) throws IOException {		// throw IOExpection for file handling
-		Scanner input = new Scanner( System.in );
-		String name = "";
+		Scanner input = new Scanner( System.in );						// Create new Scanner
+		String name = "";									// Empty string name for chord title
 		if ( args[0].equals("-h") ) { 
 			System.out.printf("Command line options: \n");
 			System.out.printf("\t -h\t Show help\n");
