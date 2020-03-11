@@ -24,7 +24,7 @@ O || - - - - - - - ||
  * Simple yet effective command line arguments:
    * -h Show help
    * -l List saved chords
-   * -n Create new chord Follow. '-n' with name of chord, for example: 
+   * -n Create new chord. Follow '-n' with name of chord, for example: 
 ```
 $ java ChordED -n Em
 ```
