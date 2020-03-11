@@ -1,13 +1,17 @@
-// Title: ChordED
-// Author: Travis Dowd
+/**
+*	<h1> ChordED </h1>
+*	<p> Intro to Programming: Final Project </p>
+*	@author Travis Dowd
+*	@version 1.0
+*/
+
 // Start Date: 3-6-2020
 // End Date: 
 //
-// Intro to Programming: Final Project
+// 
 //
 // TODO:
-//	- Add JavaDocs comments
-//	- The above means this needs be ported into Eclipse
+//	- Port into eclipse and make JavaDocs folder
 //	- Add more detailed comments via Carmac style
 //
 
@@ -15,14 +19,21 @@ import java.util.Scanner;
 import java.io.*;
 
 class ChordED {
+	/**
+	* 	<p>Main method, initializes variables and beings to get user input.</p>
+	*	@param args (String[]; command line aruments)
+	*/
 	public static void main( String[] args ) throws IOException {
 		// Variables
 		Scanner input = new Scanner( System.in );
 		String name = "";
 		String[][] guitar = { 
-			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" }, { "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" },
-			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" }, { "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" },
-			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" }, { "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" }
+			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" },
+			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" },
+			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" },
+			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" },
+			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" },
+			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" }
 		};	
 		// Command line args
 		if ( args.length == 0 ) {
@@ -36,7 +47,12 @@ class ChordED {
 		} else if ( args.length > 0 ) {
 			cmdLineArgs( args, guitar );
 		}
-	}  // Get input from user
+	}
+	/**
+	*	<p> Get input from user </p>
+	*	@param chord (String[][]; Array used for storing the users input of the chord)
+	*	@param title (String; name of the chord inputted)
+	*/
 	public static void getInput( String[][] chord, String title ) {
 		Scanner input = new Scanner( System.in );
 		for ( int i = 0; i < 6; i++ ) {
@@ -65,7 +81,12 @@ class ChordED {
 				chord[i][fret] = strFret;
 			} 
 		}
-	}  // Print out chord after inputed
+	} 
+	/**
+	*	<p> Print out the chord after user has input the values </p>
+	*	@param chord (String[][]; Array used for storing the users input of the chord)
+	*	@param title (String; name of the chord inputted)
+	*/
 	public static void printChord( String[][] chord, String title ) {
 		System.out.printf( "\t%s\n", title );
 		System.out.println( "   ---------------------" );
@@ -78,7 +99,12 @@ class ChordED {
 				}
 			}
 		} System.out.println ("   ---------------------" );
-	}  // Write chord to .txt file in chords dir
+	}
+	/**
+	*	<p> Write chord to .txt file in chords/ dir </p>
+	*	@param chord (String[][]; Array used for storing the users input of the chord)
+	*	@param title (String; name of the chord inputted)
+	*/
 	public static void writeFile( String[][] chord, String title ) throws IOException {
 		try (FileWriter fileWriter = new FileWriter( "chords/" + title + ".txt" )) {
 			fileWriter.write( "\t" + title + "\n" );
@@ -93,7 +119,12 @@ class ChordED {
 				}
 			} fileWriter.write ( "   ---------------------\n" );
 		}
-	} // Print out all saved chords > more
+	}
+	/**
+	*	<p> Print out all saved chords and pipe into less </p>
+	*	@param chord (String[][]; Array used for storing the users input of the chord)
+	*	@param title (String; name of the chord inputted)
+	*/
 	public static void listChords() {
 		try {
 			Runtime run = Runtime.getRuntime();
@@ -107,7 +138,12 @@ class ChordED {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-	} // Manage cmd line args
+	}
+	/**
+	*	<p> Manage command line args </p>
+	*	@param args (String[]; array of command line arguments)
+	*	@param guitar (String[][]; Array that is used for storing the guitar chord)
+	*/
 	public static void cmdLineArgs( String[] args, String[][] guitar ) throws IOException {
 		Scanner input = new Scanner( System.in );
 		String name = "";
