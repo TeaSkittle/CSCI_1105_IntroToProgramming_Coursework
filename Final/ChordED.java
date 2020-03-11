@@ -112,16 +112,16 @@ class ChordED {
 	*/
 	public static void listChords() {
 		try {
-			Runtime run = Runtime.getRuntime();
-			Process ps  = run.exec("./printChords.sh");
-			ps.waitFor();
-			BufferedReader buff = new BufferedReader(new InputStreamReader(ps.getInputStream()));
-			String line = "";
-			while ((line = buff.readLine()) != null) {
-				System.out.println(line);
-			} buff.close();
-		} catch (Exception ex) {
-			ex.printStackTrace();
+			Runtime run = Runtime.getRuntime();						// Create new Runtime
+			Process ps  = run.exec("./printChords.sh");					// Create process set to ./printChords.sh
+			ps.waitFor();									// Wait until process is finished
+			BufferedReader buff = new BufferedReader(new InputStreamReader(ps.getInputStream()));	// Create new buffer for reading shell script
+			String line = "";								// Empty String
+			while ((line = buff.readLine()) != null) {					// While line in proccess is not NULL
+				System.out.println(line);						// Print out line
+			} buff.close();									// Close buffer
+		} catch (Exception ex) {								// If process fails
+			ex.printStackTrace();								// Print stack trace
 		}
 	}
 	/**
@@ -132,19 +132,19 @@ class ChordED {
 	public static void cmdLineArgs( String[] args, String[][] guitar ) throws IOException {		// throw IOExpection for file handling
 		Scanner input = new Scanner( System.in );						// Create new Scanner
 		String name = "";									// Empty string name for chord title
-		if ( args[0].equals("-h") ) { 
+		if ( args[0].equals("-h") ) { 								// Display help
 			System.out.printf("Command line options: \n");
 			System.out.printf("\t -h\t Show help\n");
 			System.out.printf("\t -l\t List saved chords\n");
 			System.out.printf("\t -n\t Create new chord. Follow '-n' with name of chord, for example: \n");
 			System.out.printf("\t\t\t $ java ChordED -n Em\n");
-		} else if ( args[0].equals("-l") ) {
+		} else if ( args[0].equals("-l") ) {							// List saved chords
 			listChords();
-		} else if ( args[0].equals("-n") ) {
-			name = args[1];
-			getInput( guitar, name );
-			printChord( guitar, name );
-			writeFile( guitar, name );
+		} else if ( args[0].equals("-n") ) {							// create new chord
+			name = args[1];									// Set name = args[1]
+			getInput( guitar, name );							// Get input for chord
+			printChord( guitar, name );							// Print out chord inputted
+			writeFile( guitar, name );							// Save chord to .txt file
 		}
 	}
 }
