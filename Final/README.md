@@ -30,5 +30,5 @@ $ java ChordED -n Em
 ```
 
 ### Notes
- * To make a string muted, insert any fret number higher than 9. ( Kept fret count to 9 to simplify fomratting ).
+ * To make a string muted, insert any fret number higher than 9. ( Kept fret count to 9 to simplify formatting ).
  * All chords inputted are automatically saved in chords/ folder as .txt files, thus they are very simple to edit and modify
