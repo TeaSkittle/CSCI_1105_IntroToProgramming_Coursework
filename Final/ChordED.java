@@ -9,7 +9,6 @@
 
 // TODO:
 //	- Port into eclipse and make JavaDocs folder
-//	- Add more detailed comments via Carmac style
 //	- Fix crash on empty -n arg
 
 import java.util.Scanner;
