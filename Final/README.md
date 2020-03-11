@@ -19,8 +19,8 @@ O || - - - - - - - ||
 ```
  ### Features
  * Can create custom chords
- * Store as many chords as the user wants
- * Chords are exported into their own text files
+ * Chords are saved and exported as text files
+ * Can list all saved chords in a single command ( UNIX, not avaiable for DOS-based systems )
  * Simple yet effective command line arguments:
    * -h Show help
    * -l List saved chords
