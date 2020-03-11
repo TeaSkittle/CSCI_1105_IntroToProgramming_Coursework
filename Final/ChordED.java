@@ -4,6 +4,12 @@
 // End Date: 
 //
 // Intro to Programming: Final Project
+//
+// TODO:
+//	- Add JavaDocs comments
+//	- The above means this needs be ported into Eclipse
+//	- Add more detailed comments via Carmac style
+//
 
 import java.util.Scanner;
 import java.io.*;
