@@ -1,6 +1,6 @@
 # ChordED
 
-ChordED is a CLI tool written in java that is meant to create and store guitar chords. It is a combination of a guitar  
+ChordED is a CLI tool written in Java that is meant for creating and storing guitar chords. It is a combination of a guitar  
 chord chart:    
 ![chart](chart.png)  
 and guitar tablature:  
