@@ -1,19 +1,16 @@
 /**
 *	<h1> ChordED </h1>
 *	<p> Intro to Programming: Final Project </p>
+*	<p> Start Date: 3-6-2020 </p>
+*	<p> End Date: </p>
 *	@author Travis Dowd
 *	@version 1.0
 */
 
-// Start Date: 3-6-2020
-// End Date: 
-//
-// 
-//
 // TODO:
 //	- Port into eclipse and make JavaDocs folder
 //	- Add more detailed comments via Carmac style
-//
+//	- Fix crash on empty -n arg
 
 import java.util.Scanner;
 import java.io.*;
