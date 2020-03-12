@@ -2,7 +2,7 @@
 *	<h1> ChordED </h1>
 *	<p> Intro to Programming: Final Project </p>
 *	<p> Start Date: 3-6-2020 </p>
-*	<p> End Date: </p>
+*	<p> End Date: 3-12-2020 </p>
 *	@author Travis Dowd
 *	@version 1.0
 */
@@ -164,8 +164,8 @@ public class ChordED {
 				printChord( guitar, name );						// Print out chord inputed
 				writeFile(  guitar, name );						// Save chord to text file
 			}
-			catch( Exception e ) {							// Print error message
-				System.out.println("Error: empty chord name!");	// Chord name is empty, close program
+			catch( Exception e ) {								// Print error message
+				System.out.println("Error: empty chord name!");				// Chord name is empty, close program
 			}
 		}
 	}
