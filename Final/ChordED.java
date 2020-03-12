@@ -7,9 +7,6 @@
 *	@version 1.0
 */
 
-// TODO:
-//	- Fix crash on empty -n arg
-
 import java.util.Scanner;
 import java.io.*;
 
@@ -161,10 +158,15 @@ public class ChordED {
 		} else if ( args[0].equals("-l") ) {							// List saved chords
 			listChords();									// Call listChords() method
 		} else if ( args[0].equals("-n") ) {							// create new chord
-			name = args[1];									// Set name = args[1]
-			getInput(   guitar, name );							// Get input for chord
-			printChord( guitar, name );							// Print out chord inputed
-			writeFile(  guitar, name );							// Save chord to text file
+			try {
+				name = args[1];								// Set name = args[1]
+				getInput(   guitar, name );						// Get input for chord
+				printChord( guitar, name );						// Print out chord inputed
+				writeFile(  guitar, name );						// Save chord to text file
+			}
+			catch( Exception e ) {							// Print error message
+				System.out.println("Error: empty chord name!");	// Chord name is empty, close program
+			}
 		}
 	}
 }
