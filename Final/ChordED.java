@@ -8,16 +8,18 @@
 */
 
 // TODO:
-//	- Port into eclipse and make JavaDocs folder
 //	- Fix crash on empty -n arg
 
 import java.util.Scanner;
 import java.io.*;
 
-class ChordED {
+public class ChordED {
 	/**
-	* 	<p>Main method, initializes variables and beings to get user input.</p>
-	*	@param args (String[]; command line aruments)
+	* 	<p>Main method, if no command line arguments are supplied
+	* 		variables are initialized and user is prompted for input.</p>
+	* 
+	*	@param args (String[]; command line arguments)
+	*	@throws IOException (throws; for file handling)
 	*/
 	public static void main( String[] args ) throws IOException {		// throw IOExpection for file handling
 		Scanner input = new Scanner( System.in );			// Create new Scanner
@@ -31,24 +33,30 @@ class ChordED {
 			{ "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" }};	// String: Low E	
 		if ( args.length == 0 ) {					// Command line args
 			System.out.print( "Enter name of chord: " );		// Get user input
-			name = input.nextLine();				// Name of chord inputted
+			name = input.nextLine();				// Name of chord inputed
 			getInput(   guitar, name );				// Get input from user
-			printChord( guitar, name );				// print out inputted chord
-			writeFile(  guitar, name );				// save chord to .txt file
+			printChord( guitar, name );				// print out inputed chord
+			writeFile(  guitar, name );				// save chord to text file
 		} else if ( args.length > 0 ) {					// If command line argument is supplied,
 			cmdLineArgs( args, guitar );				// call cmdLineArgs
 		}
 	}
 	/**
-	*	<p> Get input from user </p>
+	*	<p> Get variables from user, and assign them to an array </p>
+	*	<p> Get these variables from the user:</p>
+	*	<ul>
+	*		<li>fret</li>
+	*	</ul>
+	*	<p> fret is then converted into a string and stored as strFret </p>
+	*
 	*	@param chord (String[][]; Array used for storing the users input of the chord)
-	*	@param title (String; name of the chord inputted)
+	*	@param title (String; name of the chord inputed)
 	*/
 	public static void getInput( String[][] chord, String title ) {
 		Scanner input = new Scanner( System.in );			// Create new Scanner
-		for ( int i = 0; i < 6; i++ ) {					// Loop though array fror string number
+		for ( int i = 0; i < 6; i++ ) {					// Loop though array for string number
 			int j = i + 1;						// have array go from 1-6 ( instead of 0-5)
-			switch ( j ) {						// Use sitch statement for string selection
+			switch ( j ) {						// Use switch statement for string selection
 				case 1: System.out.print( "Enter fret to played on high E: " ); break;
 				case 2: System.out.print( "Enter fret to played on B: " );      break;
 				case 3: System.out.print( "Enter fret to played on high G: " ); break;
@@ -56,7 +64,7 @@ class ChordED {
 				case 5: System.out.print( "Enter fret  to played on high A: " );break;
 				case 6: System.out.print( "Enter fret to played on low E: " );  break;							
 			} int fret = input.nextInt();				// Get fret number from user
-			if ( fret > 9 ) { 					// If fret hgher than 9, mark string as muted
+			if ( fret > 9 ) { 					// If fret higher than 9, mark string as muted
 				String strFret = "X"; 				// Muted string gets assigned "X"
 				fret = 0;					// Place "X" at chord[i][0]
 				chord[i][fret] = strFret;			// Assign "X" to chord[i][0]
@@ -68,12 +76,13 @@ class ChordED {
 	} 
 	/**
 	*	<p> Print out the chord after user has input the values </p>
+	*
 	*	@param chord (String[][]; Array used for storing the users input of the chord)
-	*	@param title (String; name of the chord inputted)
+	*	@param title (String; name of the chord inputed)
 	*/
 	public static void printChord( String[][] chord, String title ) {		
 		System.out.printf( "\t%s\n", title );				// Print chord name above chord
-		System.out.println( "   ---------------------" );		// Start fretboard of guitar
+		System.out.println( "   ---------------------" );		// Start fret board of guitar
 		for ( int i = 0; i < 6; i++ ) {					// Loop through each guitar string
 			System.out.print( chord[i][0] + " || " );		// Create cleaner formatting of array
 			for ( int j = 1; j < 10; j++ ) {			// Loop through fret of guitar
@@ -82,17 +91,19 @@ class ChordED {
 					System.out.print( "||\n" );		// Create cleaner formatting of array
 				}
 			}
-		} System.out.println ("   ---------------------" );		// End fretboard of guitar
+		} System.out.println ("   ---------------------" );		// End fret board of guitar
 	}
 	/**
-	*	<p> Write chord to .txt file in chords/ dir </p>
+	*	<p> Write chord to text file in chords/ directory </p>
+	*
 	*	@param chord (String[][]; Array used for storing the users input of the chord)
-	*	@param title (String; name of the chord inputted)
+	*	@param title (String; name of the chord inputed)
+	*	@throws IOException (throws; for file handling)
 	*/
 	public static void writeFile( String[][] chord, String title ) throws IOException {	// throw IOExpection for file handling
 		try (FileWriter fileWriter = new FileWriter( "chords/" + title + ".txt" )) {	// Create new file to write to
 			fileWriter.write( "\t" + title + "\n" );				// Write chord name to file
-			fileWriter.write( "   ---------------------\n" );			// Start fretboard of guitar 
+			fileWriter.write( "   ---------------------\n" );			// Start fret board of guitar 
 			for ( int i = 0; i < 6; i++ ) {						// Loop through each guitar string
 				fileWriter.write( chord[i][0] + " || " );			// Write clean formatting of array
 				for ( int j = 1; j < 10; j++ ) {				// Loop through fret of guitar
@@ -101,13 +112,14 @@ class ChordED {
 						fileWriter.write( "||\n" );			// Write clean formatting of array
 					}
 				}
-			} fileWriter.write ( "   ---------------------\n" );			// End fretboard of guitar
+			} fileWriter.write ( "   ---------------------\n" );			// End fret board of guitar
 		}
 	}
 	/**
-	*	<p> Print out all saved chords and pipe into less </p>
-	*	@param chord (String[][]; Array used for storing the users input of the chord)
-	*	@param title (String; name of the chord inputted)
+	*	<p> Print out all saved chords and pipe into less. </p>
+	*	<p> This method calls an external shell script ( printChords.sh )
+	*		which should be placed in the same directory as the
+	*		compiled ChordED program. </p>
 	*/
 	public static void listChords() {
 		try {
@@ -116,7 +128,7 @@ class ChordED {
 			ps.waitFor();									// Wait until process is finished
 			BufferedReader buff = new BufferedReader( new InputStreamReader(ps.getInputStream()) );	// Create new buffer for reading shell script
 			String line = "";								// Empty String
-			while ( (line = buff.readLine()) != null ) {					// While line in proccess is not NULL
+			while ( (line = buff.readLine()) != null ) {					// While line in process is not NULL
 				System.out.println( line );						// Print out line
 			} buff.close();									// Close buffer
 		} catch ( Exception ex ) {								// If process fails
@@ -124,9 +136,18 @@ class ChordED {
 		}
 	}
 	/**
-	*	<p> Manage command line args </p>
+	*	<p> Manage command line arguments </p>
+	*	<p> Available arguments: </p>
+	*	<ul>
+	*		<li>-h  Show help</li>
+	*		<li>-l  Print out saved chords</li>
+	*		<li>-n  Create new chord, example:</li>
+	*	</ul>
+	*	<p> $ java ChordED -n Em </p>
+	*
 	*	@param args (String[]; array of command line arguments)
 	*	@param guitar (String[][]; Array that is used for storing the guitar chord)
+	*	@throws IOException (throws; for file handling)
 	*/
 	public static void cmdLineArgs( String[] args, String[][] guitar ) throws IOException {		// throw IOExpection for file handling
 		Scanner input = new Scanner( System.in );						// Create new Scanner
@@ -142,8 +163,9 @@ class ChordED {
 		} else if ( args[0].equals("-n") ) {							// create new chord
 			name = args[1];									// Set name = args[1]
 			getInput(   guitar, name );							// Get input for chord
-			printChord( guitar, name );							// Print out chord inputted
-			writeFile(  guitar, name );							// Save chord to .txt file
+			printChord( guitar, name );							// Print out chord inputed
+			writeFile(  guitar, name );							// Save chord to text file
 		}
 	}
 }
+
